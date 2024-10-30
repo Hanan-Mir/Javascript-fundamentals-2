@@ -166,3 +166,43 @@ if(mark.calcBMI()>john.calcBMI()){
 else{
     console.log(`${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})`)
 }
+//--------------------------------------THE FOR LOOP-----------------------------------------------
+for(let voterNumber=1;voterNumber<=50;voterNumber++){
+    console.log(`Voter number ${voterNumber} is currently voting`);
+}
+//-------------------------------LOOPING ARRAY, BREAKING AND CONTINUING-----------------------------
+let populationArrayNeighbours=[2223,3334,6667,2212]
+let percentages2=[];
+for (let i=0;i<populationArray.length;i++)
+{
+percentages2.push(percentageOfWorld1(neighbouringCountries[i],populationArrayNeighbours[i]));
+
+}
+console.log(percentages2);
+//-------------------------------CHALLENGE #4----------------------------------------------
+let bills=[22,295,176,440,37,105,10,1100,86,52];
+let tips=[];
+let totals=[];
+let calcTipNew=function(){
+for(let i=0;i<bills.length;i++){
+    tips.push(bills[i]>=50 && bills[i]<=300 ? 0.15*bills[i]:0.2*bills[i]);
+}
+for(let i=0;i<bills.length;i++)
+{
+totals.push(bills[i]+tips[i]);
+}
+}
+let calcAverageNew=function(arr1){
+let sum=0;
+let averageNew;
+for(let i=0;i<arr1.length;i++){
+    sum+=arr1[i];
+}
+averageNew=sum/arr1.length;
+console.log(averageNew);
+}
+calcTipNew();
+console.log(tips);
+console.log(totals);
+calcAverageNew(totals);
+calcAverageNew([2,1,2]);
